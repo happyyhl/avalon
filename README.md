@@ -16,12 +16,12 @@ avalon2
 保存并退出 vi
 :wq
 
-退出 vi，但不保存更改
+退出 vi，但不保存更 改
 :q
 
 用其他文件名保存
 :w filename
-
+ 
 在现有文件中保存并覆盖原文件
 :w! filename
 #######################################
@@ -45,8 +45,14 @@ avalon2
             dateFormatStr:"yyyy-MM-dd HH:mm:ss"
         };
         <td><div>{{ el.startTime | date(common.dateFormatStr) }}</div></td> //正常
-
-         
+## 5:我们可以在首页渲染页面时, 想挡住双花括号乱码问题,可以尝试这样干
+         .ms-controller{
+             visibility: hidden;
+          }
+## 6:关闭 控制台打印消息
+         avalon.config({
+            debug: false
+         })
 #问题总结
 ## 1:checkbox 勾选问题
         var vm=avalon.define({
