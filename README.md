@@ -74,5 +74,6 @@ avalon2
          ms-if="el.testStatus >=1"  ||  ms-if="el.testStatus <=1" 
          //最好用 ms-visible  代替 否则可能 会出现显示不了的 情况；原因未知；
 
-
+###选择框方法
+        $("input[type='checkbox']").not(":checked");$("input[type='checkbox']").is(":checked");
 
